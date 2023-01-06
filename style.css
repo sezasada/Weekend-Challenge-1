@@ -1,0 +1,13 @@
+body {
+    background-color: white;
+}
+
+h1 {
+    text-align: center;
+    border: 1px solid black;
+    padding: 40px;
+    background-color: grey;
+    color:white;
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+}
