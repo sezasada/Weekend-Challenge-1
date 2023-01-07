@@ -15,11 +15,16 @@
         <main>
             <h2>Add Employee</h2>
             <div id="inputs">
-                <input placeholder="First Name" type="text" id="first-name-tag">
-                <input placeholder="Last Name" type="text" id="last-name-tag">
-                <input placeholder="ID" type="text" id="id-tag">
-                <input placeholder="Title" type="text" id="title-tag">
-                <input placeholder="Annual Salary" type="text" id="annual-salary-tag">
+                <label for="first-name">First Name:</label>
+                <input type="text" id="first-name">
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name">
+                <label for="id">ID:</label>
+                <input type="text" id="id">
+                <label for="title">Title:</label>
+                <input type="text" id="title">
+                <label for="annual-salary">Annual Salary:</label>
+                <input type="text" id="annual-salary">
             </div>
             <div id="container-button">
                 <button id="submit-button">Submit</button>
@@ -36,9 +41,9 @@
                         <th></th>
                     </tr>
                 </thead>
+                <tbody id="employees">
+                </tbody>
             </table>
-
-
         </main>
     </body>
     </div>
