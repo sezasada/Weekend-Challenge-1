@@ -3,6 +3,11 @@ console.log('in js');
 $(function () {
     //setting up the click handlers.
     $('#submit-button').on('click', addEmployee);
+
+    // adding delete button call
+    $('#employees').on('click', '.delete', deleteEmployees);
+
+
 });
 
 function addEmployee() {
@@ -24,7 +29,7 @@ function addEmployee() {
     $('#annual-salary').val('');
 
     let rowClass = 'small-salary';
-    if (Number(employeeObject.annualSalary) > 20,000) {
+    if (Number(employeeObject.annualSalary) > 20000) {
         rowClass = 'big-salary';
     }
 
@@ -38,5 +43,7 @@ function addEmployee() {
         <td><button class="delete">Delete</button></td>
     </tr>
     `);
-
 }
+
+function deleteEmployees(event) {
+    $(event.target).closest('tr').remove();}

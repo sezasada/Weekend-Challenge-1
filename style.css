@@ -43,3 +43,9 @@ th{
     border: 1px solid black;
     background-color: lightgray;
 }
+
+.big-salary {
+    background: black;
+    color: white;
+    font-weight: bold;
+}
