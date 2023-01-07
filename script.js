@@ -13,6 +13,30 @@ function addEmployee() {
         lastName: $('#last-name').val(),
         id: $('#id').val(),
         title: $('#title').val(),
-        annualSalary: $('#annualSalary').val()
+        annualSalary: $('#annual-salary').val()
     };
+
+    //clearing inputs
+    $('#first-name').val('');
+    $('#last-name').val('');
+    $('#id').val('');
+    $('#title').val('');
+    $('#annual-salary').val('');
+
+    let rowClass = 'small-salary';
+    if (Number(employeeObject.annualSalary) > 20,000) {
+        rowClass = 'big-salary';
+    }
+
+    $(`#employees`).append(`
+    <tr class="${rowClass}">
+        <td>${employeeObject.firstName}</td>
+        <td>${employeeObject.lastName}</td>
+        <td>${employeeObject.id}</td>
+        <td>${employeeObject.title}</td>
+        <td>${employeeObject.annualSalary}</td>
+        <td><button class="delete">Delete</button></td>
+    </tr>
+    `);
+
 }
