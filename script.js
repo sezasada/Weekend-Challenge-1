@@ -7,10 +7,9 @@ $(function () {
     // adding delete button call
     $('#employees').on('click', '.delete', deleteEmployees);
 
+    // setting initial salary value to 0;
     annualSalary = 0;
     $('#total-monthly').text(annualSalary);
-
-
 });
 
 function addEmployee() {
@@ -21,7 +20,7 @@ function addEmployee() {
         lastName: $('#last-name').val(),
         id: $('#id').val(),
         title: $('#title').val(),
-        annualSalary: $('#annual-salary').val()
+        annualSalary: $('#annual-salary').val(),
     };
 
     //clearing inputs
@@ -31,13 +30,9 @@ function addEmployee() {
     $('#title').val('');
     $('#annual-salary').val('');
 
-    let rowClass = 'small-salary';
-    if (Number(employeeObject.annualSalary) > 20000) {
-        rowClass = 'big-salary';
-    }
-
+    // appending the object values into the table.
     $(`#employees`).append(`
-    <tr class="${rowClass}">
+    <tr>
         <td>${employeeObject.firstName}</td>
         <td>${employeeObject.lastName}</td>
         <td>${employeeObject.id}</td>
@@ -46,11 +41,19 @@ function addEmployee() {
         <td><button class="delete">Delete</button></td>
     </tr>
     `);
-
+    // making the annual salary value increment by its new value.
+    // setting total monthly equal to the annual salary / 12 months. 
     annualSalary += Number(employeeObject.annualSalary);
-    $('#total-monthly').text(annualSalary);
-}
+    totalMonthly = annualSalary / 12;
 
+    $('#total-monthly').text(totalMonthly);
+    // if total monthly is more than 20,000, the background color will be red.
+    if (totalMonthly > 20000) {
+        $('#total-monthly').css('background-color', 'red');
+    } 
+
+}
+// function that deletes a table row when clicked
 function deleteEmployees(event) {
     $(event.target).closest('tr').remove();
 }
