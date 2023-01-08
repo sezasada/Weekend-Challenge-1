@@ -21,7 +21,7 @@ h1 {
 h2 {
     padding-left: 8px;
 }
-#inputs {
+#form {
     text-align: left;
     height: 4vh;
     padding-left: 8px;
@@ -45,7 +45,7 @@ th{
 }
 
 .big-salary {
-    background: black;
+    background: red;
     color: white;
     font-weight: bold;
 }
