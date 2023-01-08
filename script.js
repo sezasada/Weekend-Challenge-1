@@ -7,6 +7,9 @@ $(function () {
     // adding delete button call
     $('#employees').on('click', '.delete', deleteEmployees);
 
+    annualSalary = 0;
+    $('#total-monthly').text(annualSalary);
+
 
 });
 
@@ -43,7 +46,11 @@ function addEmployee() {
         <td><button class="delete">Delete</button></td>
     </tr>
     `);
+
+    annualSalary += Number(employeeObject.annualSalary);
+    $('#total-monthly').text(annualSalary);
 }
 
 function deleteEmployees(event) {
-    $(event.target).closest('tr').remove();}
+    $(event.target).closest('tr').remove();
+}
