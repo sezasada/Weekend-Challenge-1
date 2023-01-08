@@ -1,5 +1,5 @@
 body {
-    background-color: black;
+    background-color: darkgrey;
 }
 #bodyDiv {
     background-color: #f2f2f2;
@@ -52,5 +52,6 @@ td {
 }
 
 tr:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: grey;
+    color:#f2f2f2;
 }
