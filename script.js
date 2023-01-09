@@ -51,6 +51,9 @@ function addEmployee() {
     if (totalMonthly > 20000) {
         $('#total-monthly').css('background-color', 'red');
     } 
+    if (totalMonthly < 20000) {
+        $('#total-monthly').css('background-color', 'white');
+    }
 
 }
 // function that deletes a table row when clicked
