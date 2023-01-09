@@ -37,7 +37,7 @@ function addEmployee() {
         <td>${employeeObject.lastName}</td>
         <td>${employeeObject.id}</td>
         <td>${employeeObject.title}</td>
-        <td>${employeeObject.annualSalary}</td>
+        <td>$ ${employeeObject.annualSalary}</td>
         <td><button class="delete">Delete</button></td>
     </tr>
     `);
